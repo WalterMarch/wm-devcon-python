@@ -33,7 +33,7 @@
 				"eamodio.gitlens",
 				"streetsidesoftware.code-spell-checker",
 				"ms-azuretools.vscode-docker",
-				"GitHub.copilot"
+				"ms-python.python"
 			]
 		}
 	}
