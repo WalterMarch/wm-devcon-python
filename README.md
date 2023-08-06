@@ -13,3 +13,16 @@ I chose to use a Ubuntu base and install `pyenv` to allow multiple version of Py
 Based on https://code.visualstudio.com/docs/devcontainers/containers
 
 Jumping off point for `pyenv`: https://realpython.com/intro-to-pyenv/
+
+### miscellany
+
+`configit.sh` looks like this:
+```bash
+#!/bin/bash
+
+git config --global user.email "yourEmail@mail.com"
+git config --global user.name "yourGitUserName"
+
+git config --global --add safe.directory $1
+```
+
