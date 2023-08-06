@@ -5,10 +5,9 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 	"features": {
-		"ghcr.io/devcontainers/features/git:1": {
-			"ppa": true,
-			"version": "latest"
-		}
+		"ghcr.io/devcontainers/features/java:1": {},
+		"ghcr.io/devcontainers-contrib/features/mypy:2": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
 	// https://stackoverflow.com/a/67803226/21655737
 	"mounts": [
@@ -22,7 +21,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "/workspaces/wm-devcon-python/.devcontainer/post-create.sh",
+	"postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/post-create.sh ${containerWorkspaceFolder}",	
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -33,7 +32,10 @@
 				"eamodio.gitlens",
 				"streetsidesoftware.code-spell-checker",
 				"ms-azuretools.vscode-docker",
-				"ms-python.python"
+				"ms-python.python",
+				"ms-python.pylint",
+				"ms-python.black-formatter",
+				"DavidAnson.vscode-markdownlint"
 			]
 		}
 	}
